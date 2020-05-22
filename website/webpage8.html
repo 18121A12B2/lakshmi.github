@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color:#7DA2A9;
+}
+td,th
+{
+padding:2.2px;
+width:1px;
+}
+input,select{
+width:200px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width:33.33%;
+  padding: 10px;
+}
+.column1 {
+  float: left;
+  width:33.33%;
+  padding:0px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.submit {
+    width: 55px;
+    height: 30px;
+    display: block;
+    margin: 2.5em auto 0;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    bottom: 190px;
+	width:80px;
+	height:30px;
+	background-color:forestgreen;
+    color:white;
+}
+</style>
+</head>
+<body>
+<form action = "/storewomendetails" method = "POST">
+<p style="color:deeppink;text-align:center;font-size:18pt;line-height:0px;"><b>WOMEN REGISTRATION</b></p>
+<div class="row">
+    <div class="column">
+   	<table border="0" align="center" style="text-align:left;" width="500">
+	<tr>
+	<th style="font-size:14pt;padding:2px;">Name</th>
+    <td><input type="text" name="Name"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;padding:2px;">Occupation</th>
+	<td><select name="Occupation">
+		<option value="" selected="selected">Select Occupation
+		<option value="one">House wife
+		<option value="two">Government Employee
+		<option value="three">Private Employee
+		<option value="four">Others
+	</select></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;padding:2px;">Hus Education</th>
+	<td><select name="Husband Education">
+		<option value="" selected="selected">Select Education
+		<option value="one">Uneducate
+		<option value="two">Under Graduate
+		<option value="three">Graduate
+		<option value="four">Post Graduate
+	</select></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;padding:2px;">Caste</th>
+	<td><select name="Caste">
+		<option value="" selected="selected">Select Caste
+		<option value="one">OC
+		<option value="two">OBC
+		<option value="three">BC
+		<option value="four">SC
+		<option value="five">ST
+	</select></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;padding:2px;">Expected Delivery Date</th>
+	<td><input type="date" name="EDDate"></td>
+	</tr>
+	<th style="font-size:14pt;padding:2px;">Mobile no</th>
+	<td><input type="text" name="Mobile no"></td>
+	</tr>
+	</table>
+	  </div>
+    <div class="column">
+  <table border="0" style="text-align:left;" align="center" width="500">
+    <tr>
+	<th style="font-size:14pt;width:100px;">Age</th>
+    <td><input type="number" name="Age"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">Aadhaar no</th>
+	<td><input type="number" name="Aadhaar"></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;">Hus Occupation</th>
+	<td><select name="Husband Occupation">
+		<option value="" selected="selected">Select Occupation
+		<option value="one">House wife
+		<option value="two">Government Employee
+		<option value="three">Private Employee
+		<option value="four">Others
+	</select></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">LMP Date</th>
+	<td><input type="date" name="LMP Date"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">BP</th>
+	<td><input type="text" name="BP"></td>
+	</tr>
+	</table>
+  </div>
+  <div class="column">
+   	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;">Education</th>
+	<td><select name="Education">
+		<option value="" selected="selected">Select Education
+		<option value="one">Uneducate
+		<option value="two">Under Graduate
+		<option value="three">Graduate
+		<option value="four">Post Graduate
+	</select></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">Hus Name</th>
+    <td><input type="text" name="Husband Name"></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;">Income(yr)</th>
+	<td><input type="number" name="Annual Income"></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;">Weight</th>
+	<td><input type="number" name="Weight"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">Blood Group</th>
+	<td><select name="Blood Group">
+		<option value="" selected="selected">Select Blood Group
+		<option value="one">A+
+		<option value="two">A-
+		<option value="three">B+
+		<option value="four">B-
+		<option value="five">O+
+		<option value="six">O-
+		<option value="seven">AB+
+		<option value="eight">AB-
+	</select></td>
+	</tr>
+	</table>
+  </div>
+</div>
+<p style="font-size:18pt;line-height:0px;color:darkblue"><b>Permanent Address</b></p>
+<div class="row">
+    <div class="column1">
+	<table border="0" align="center" style="text-align:left;" width="500">
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">Dno</th>
+	<td style="padding-left:-5px;"><input type="text" name="PDno" align="left"></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">Taluka</th>
+    <td style="padding-left:-5px;"><input type="text" name="PTaluka"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:10px;">Pincode</th>
+    <td style="padding-left:-5px;"><input type="text" name="PPincode"></td>
+	</tr>
+	</table>
+	</div>
+    <div class="column1">
+	<table border="0" align="center" style="text-align:left;" width="500">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Street</th>
+    <td><input type="text" name="PStreet"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">District</th>
+    <td><input type="text" name="PDistrict"></td>
+	</tr>
+	</table>
+	</div>
+	<div class="column1">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Village</th>
+    <td><input type="text" name="PVillage"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">State</th>
+    <td><input type="text" name="PState"></td>
+	</tr>
+	</table>
+	</div>
+</div>
+	<p style="font-size:18pt;line-height:0px;color:darkblue;"><b>Communication Address</b></p>
+   <div class="row">
+	 <div class="column1">
+	 	<table border="0" align="center" style="text-align:left;" width="500">
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">Dno</th>
+	<td style="padding-left:-5px;"><input type="text" name="CDno" align="left"></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">Taluka</th>
+    <td style="padding-left:-5px;"><input type="text" name="CTaluka"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:10px;">Pincode</th>
+    <td style="padding-left:-5px;"><input type="text" name="CPincode"></td>
+	</tr>
+	</table>
+
+    </div>
+	<div class="column1">
+	<table border="0" align="center" style="text-align:left;" width="500">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Street</th>
+    <td><input type="text" name="CStreet"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">District</th>
+    <td><input type="text" name="CDistrict"></td>
+	</tr>
+	</table>
+	</div>
+	<div class="column1">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Village</th>
+    <td><input type="text" name="CVillage"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">State</th>
+    <td><input type="text" name="CState"></td>
+	</tr>
+	</table>
+	</div>
+ </div>
+ <div class="wrapper">
+    <button class="button"><strong>	Submit</strong></button><br><br>
+</div>
+      	<h3 align="center"style="color:hsl(120, 100%, 70%);">{{msg}}</h3>
+</form>
+</body>
+</html>

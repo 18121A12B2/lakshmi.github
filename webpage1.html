@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///C:/Users/Lakshmi%20Devi/Downloads/anmaccount%20(2).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CSS Website Layout</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="file:///C:/Users/Lakshmi%20Devi/Downloads/%7B%7B%20url_for(&#39;static&#39;,filename=&#39;scripts/country.js&#39;)%20%7D%7D"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color:#7DA2A9;  
+
+  margin: 0;
+}
+td,th
+{
+padding:2.2px;
+width:1px;
+}
+input,select{
+width:200px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width:33.33%;
+  padding: 10px;
+}
+.column1 {
+  float: left;
+  width:100%;
+  padding:0px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.submit {
+    width: 15px;
+    height: 20px;
+    display: block;
+    margin: 2.5em auto 0;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+	text-align:center;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    bottom: 10%;
+	width:80px;
+	height:35px;
+	background-color:forestgreen;
+    color:white;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<form action="file:///C:/storeDetails" method="POST" name="myform" id="myForm">
+	<h3 style="color:mediumvioletred;text-align:center;font-size:30pt;">New User</h3><table border="0" align="center" style="text-align:left;padding-top:0px;" width="500">
+	
+	<tbody><tr>
+	<th style="font-size:14pt;width:75%;text-align:left;">ID</th>
+    <td><input type="text" name="ID"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:75%;text-align:left">Name</th>
+	<td><input type="text" name="Name"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:75%;text-align:left">Designation</th>
+	<td><input type="text" name="Designation"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:75%;text-align:left">Email ID</th>
+	<td><input type="email" name="email"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:75%;text-align:left">Mobile no</th>
+	<td><input type="number" name="Mobile no"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:75%;text-align:left">Password</th>
+	<td><input type="password" name="password"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:75%;text-align:left">Confirm Password</th>
+	<td><input type="password" name="cpassword"></td>
+	</tr>
+	</tbody></table>
+<p style="font-size:18pt;line-height:0px;color:darkblue"><b>Place of Work:</b></p>
+<div class="row">
+    <div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tbody><tr>
+	<th style="font-size:14pt;padding-left:10px;">State</th>
+	<td style="padding-left:70px;"><select name="state" id="countySel" size="1">
+		<option value="" selected="selected">Select State</option>
+	</select></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">PHC</th>
+    <td style="padding-left:70px;"><input type="text" name="phc"></td>
+	</tr>
+	</tbody></table>
+	</div>
+    <div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tbody><tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">District</th>
+	<td><select name="district" id="stateSel" size="1">
+		<option value="" selected="selected">Please select State first</option>
+    </select></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Subcenter</th>
+    <td><input type="text" name="subcenter"></td>
+	</tr>
+	</tbody></table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tbody><tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Taluka</th>
+		<td><select name="taluka" id="districtSel" size="1">
+		<option value="" selected="selected">Please select District first</option>
+	</select></td>
+	</tr>
+	</tbody></table>
+	</div>
+</div>
+	<p style="font-size:18pt;line-height:0px;color:darkblue;"><b>Permanent Address::</b></p>
+   <div class="row">
+	 <div class="column">
+	 	<table border="0" align="center" style="text-align:left;" width="400">
+		<tbody><tr>
+	<th style="font-size:14pt;padding-left:10px;">Dno</th>
+	<td style="padding-left:-5px;"><input type="text" name="dno" align="left"></td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">Taluka</th>
+    <td style="padding-left:-5px;"><input type="text" name="taluka1"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:10px;">Pincode</th>
+    <td style="padding-left:-5px;"><input type="text" name="pincode"></td>
+	</tr>
+	</tbody></table>
+
+    </div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tbody><tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Street</th>
+    <td><input type="text" name="street"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">District</th>
+    <td><input type="text" name="district1"></td>
+	</tr>
+	</tbody></table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tbody><tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Village</th>
+    <td><input type="text" name="village"></td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">State</th>
+    <td><input type="text" name="state1"></td>
+	</tr>
+	</tbody></table>
+	</div>
+ </div>
+<div class="wrapper">
+    <button class="button"><strong>Submit</strong></button>
+</div>
+</form>
+
+
+</body></html>

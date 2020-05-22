@@ -1,0 +1,99 @@
+<html>
+    <head>
+<style>
+.container
+    {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align:left;
+    }
+.container h1
+    {
+        color:white;
+        font-size:36px;
+        margin-bottom:40px;
+    }
+    .button
+    {
+        background:#fff;
+        padding:10px 15px;
+        color:tomato;
+        font-size:bolder;
+        text-transform:uppercase;
+        font-size:18px;
+        border-radius:5px;
+        box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+        margin-top:25px;
+        text-decoration:none;
+        transition:0.4s;
+    }
+    .button:hover{
+        background:darkblue;
+        color:ghostwhite
+    }
+    .popup{
+        background:rgba(0,0,0,0.0);
+        width:100%;
+        height:100%;
+        position:absolute;
+        top:0;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .popup-content{
+        height=250px;
+        width:500px;
+        background:white;
+        padding:20px;
+        border-radius:5px;
+        position:relative;
+    }
+    input{
+        margin:20px auto;
+        display:block;
+        width:50%;
+        padding:8px;
+        border:1px solid gray;
+    }
+    .close
+    {
+        position:absolute;
+        top:-15px;
+        right: -15px;
+        background: white;
+        height:20px;
+        width:20px;
+        border-radius:50%
+            box-shadow:6px 6px 29px -4px rgba(0,0,0,0.75);
+        cursor:pointer;
+    }
+    </style>
+        </head>
+    <body>
+ <div class="container">
+    <h1>POPUPLOGIN</h1>
+        <a href="#" class="button">Login</a>
+        </div> 
+    <div class="popup">
+    <div class="poppup-content">
+    <img src="close.jpeg" alt="close class="close>
+    <img src="avatar.jpeg" alt="user">
+        <input type="text" placeholder="Usernmae">
+        <input type="password" placeholder="Password">
+        <a href="#" class="button"> Login</a>
+        </div>
+        </div>
+    <script>
+        document.getElementById("button").addEventListener("click" function()
+        {
+            document.querySelector(".popup").style.display="flex";
+        })
+        document.querySelector("close").addEventListener("click",function(){
+            document.querySelector(".popup").style.display="none";
+        })
+        </script>
+    </body>
+</html>

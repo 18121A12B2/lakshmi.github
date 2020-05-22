@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="{{ url_for('static',filename='stylesheet/style_modified2.css') }}" type="text/css" media="all" />
+ </head>
+<body>
+<form action="womenhealthdetails" method='POST'>
+	<table border="0" align="center"  style="text-align:left;"width="400">
+	<h3 style="color:black;text-align:center;font-size:20pt;">WOMEN HEALTH DETAILS</h3>
+	<tr>
+	<th>MRno</th>
+	<td><input type="text" name="MRno"></td>
+	</tr>
+	</table>
+	<div class="row">
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+	<tr>
+	<th>Visit No</th>
+    <td><input type="number" name="Visit No"></td>
+	</tr>
+	<tr>
+	<th>HDRL</th>
+    <td><input type="text" name="HDRL"></td>
+	</tr>
+	<tr>
+	<th>Next Visit Date</th>
+	<td><input type="Date" name="Next Visit Date"></td>
+	</tr>
+	<tr>
+	<th>Remarks</th>
+	<td><input type="text" name="Remarks"></td>
+	</tr>
+	</table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+	<tr>
+	<th>Weight</th>
+    <td><input type="number" name="Weight"></td>
+	</tr>
+	<tr>
+	<th>Sugar Levels</th>
+    <td><input type="text" name="Sugar Levels"></td>
+	</tr>
+	<tr>
+	<th>Vaccine Given</th>
+	<td><select name="Vaccine Given">
+		<option value="" selected>
+		<option value="one">TT1
+		<option value="two">TT2
+		<option value="three">Daily supplementation(Folic acid,iron)
+	</select></td>
+	</tr>
+	</table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+	<tr>
+	<th>HIV/HBS</th>
+    <td><input type="text" name="HIV/HBS"></td>
+	</tr>
+	<tr>
+	<th>Visited Date</th>
+	<td><input type="date" name="Visited Date"></td>
+	</tr>
+	<tr>
+	<th>Next Vaccine to be Given</th>
+	<td><select name="Next Vaccine">
+		<option value="" selected>
+		<option value="one">TT1
+		<option value="two">TT2
+		<option value="three">Daily supplementation(Folic acid,iron)
+	</select></td>
+	</tr>
+	</table>
+	</div>
+	</div>
+	<button type="submit" class="btn submit" style="background-color:hsl(240,80%,45%);color:white">Update
+	</button>
+			<h3 align="center"style="color:hsl(120, 100%, 70%);">{{msg}}</h3>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<style>
+body
+{
+	margin:0px 0px 0px 0px;
+}
+
+
+.head
+{
+	float:left;
+	font-family:verdana;
+	size:20px;
+	color:#000000;
+	width:40%;
+	
+}
+
+
+
+.mp
+{
+	float:left;
+	font-family:verdana;
+	font-size:15px;
+	color:#000000;
+	width:26%;
+	padding-right:5%;
+	padding-left:6%;
+	margin-top:5%;
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) { 
+            .mp { 
+                width:100%;
+		background-color:#ff0000;
+		 
+            } 
+        } 
+
+.lp
+{
+	float:right;
+	font-family:verdana;
+	color:#000000;	width:25%;
+	vertical-align: text-top;
+	margin-top:5%;
+	padding-right:5%;
+	
+	
+}
+
+
+@media (min-width: 480px) and (max-width: 767px) { 
+            .lp { 
+                width:100%;
+		margin-left:10px;
+		 
+            } 
+        } 
+</style>
+<body>
+
+
+<div>
+	
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("img_nature.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Add styles to the form container */
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+
+<h2>Form on Hero Image</h2>
+<div class="bg-img">
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+  </form>
+</div>
+
+<p>This example creates a form on a responsive image. Try to resize the browser window to see how it always will cover the whole width of the screen, and that it scales nicely on all screen sizes.</p>
+
+</body>
+</html>
+
+	<div class="mp"><strong>A buzzword-free zone</strong><br />
+We replace inflated success stories and click-baity tech jargon with unpolished human stories and thoughtful, earnest conversations.
+<br /><br />
+<strong>The big picture</strong><br />
+We are unmoved by the latest fads and instead focus on the long-term positive and negative impact of major trends in technology.
+<br /><br />
+<strong>Taking a stand</strong><br />
+We’ve taken off the rose-coloured goggles to lay bare Big Tech’s lack of ethics, proposing a more sustainable and humane way forward.
+<br /><br />
+<strong>Proudly indie</strong><br />
+We’re funded by our readers and a handful of values-aligned sponsors allowing us to take a candid, objective view at the tech world.</div>
+	<div class="lp"><img src="poshan1.jpg" style="width:200px; height:300px;"></div>
+</div>

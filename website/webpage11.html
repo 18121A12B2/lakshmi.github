@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style_modified2.css') }}">
+  <style>
+   body {
+  background-image: url('/static/images/poshan.jpeg');
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  background-attachment:fixed;
+        }
+		a:link, a:visited {
+  background-color:hsl(240,80%,45%);
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+</style>
+
+<body>
+    <div style="position:absolute;z-index:1;left:10px;top:2px"><image src="/static/images/indialogo.png" width="100" height="90" /></div>
+	<div style="position:absolute;z-index:1;left:1425px;top:2px"><image src="/static/images/plogo.png" width="100" height="90" /></div>
+    <h3 style="color:hsl(240,100%,50%);text-align:center;font-size:30pt;line-height:10px;">Ministry of Women and Child Development</h3>
+	<h3 style="color:red;text-align:center;font-size:27pt;line-height:15px;">Government of India</h3>
+	<ul >
+	  <li style="float:right;margin-right:30px;">
+	   <li class="dropdown r-align"style="font-size:15pt;">
+    <a href="javascript:void(0)" class="dropbtn">Next Dosage Details</a>
+    <div class="dropdown-content"><br>
+    <table border="0" align="center"width= "75%">
+	<tr><td width="40%"><b>MR no:</b>
+    </td><td width="45%"height="50%"><input type="text" name=""></td></tr>
+	</table>
+    <button type="submit" class="btn submit" style="float:right;margin-right:100px;background-color:#1cc7d0">Ok
+					</button>
+    </div>
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn"style="font-size:15pt; right:250px;">About</a>
+    <div class="dropdown-content">
+ <p>POSHAN Abhiyaan (National Nutrition Mission) is a multi-ministerial convergence mission with the vision to ensure attainment of malnutrition free India by 2022. The objective of POSHAN Abhiyaan to reduce stunting in identified Districts of India with the highest malnutrition burden by improving utilization of key Anganwadi Services and improving the quality of Anganwadi Services delivery. Its aim to ensure holistic development and adequate nutrition for pregnant women, mothers and children.</p>
+    </div>
+  </li>
+</ul>
+<br/>  
+
+	<div class="sub-main-w3"style="height:50%";>
+			<div class="bg-content-w3pvt">
+				<div class="top-content-style"></div>
+				<form action = "/userValidation" method = "POST">
+					<p class="legend">Login Here</p>
+					<div class="input">
+						<input type="text" style="height:40%;" placeholder="Login ID" name="ID" required />
+					</div>
+					<div class="input">
+						<input type="password" style="height:40%;" placeholder="Password" name="password" required />
+					</div>
+						<button type="submit" class="btn submit" style="background-color:#1cc7d0;color:white">Login
+						</button>
+				<h3>New User?<a href="/anmSignup" class="bottom-text-w3ls" style="background-color:#1cc7d0;line-height:0px;">Sign-Up</a><br></h3>
+			</div>
+		</div>
+		<h3 align="center"style="color:hsl(120, 100%, 70%);">{{msg}}</h3>
+		<h4>{% for row in rows %}
+        	       <h4>{{row[0]}}</h4></a>
+	         {% endfor %}
+			 </h4>
+			 </form>
+		</body>
+</html>
+
+
+
+

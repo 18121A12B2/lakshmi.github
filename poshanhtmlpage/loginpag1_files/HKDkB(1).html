@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://cdpn.io/geoffreyrose/fullembedgrid/HKDkB?type=embed&animations=run -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen -  Hide/Show Password Login Form</title>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
+<link rel="stylesheet" href="./reset.min.css">
+<style>
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, html, .login_form {
+  height: 100%;
+}
+
+body {
+  background: #262626;
+}
+
+.login_form {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-flex: center;
+  -moz-box-flex: center;
+  -webkit-flex: center;
+  -ms-flex: center;
+  flex: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  max-width: 500px;
+  width: 100%;
+}
+
+.logo {
+  text-align: center;
+}
+.logo img {
+  max-width: 200px;
+  width: 100%;
+  margin: 1em auto 2em;
+}
+
+form {
+  background: #000;
+  padding: 2em 1em;
+  font-family: helvetica, sans-serif;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+form label {
+  color: #fff;
+  margin: 0 3% .25em;
+  display: block;
+  font-family: helvetica, sans-serif;
+}
+form input {
+  width: 94%;
+  padding: .5em .25em;
+  margin: 0 3% 1em;
+  font-size: 1.2em;
+  border: 2px solid #000;
+  outline: none;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+form input.password {
+  padding-right: 4rem;
+}
+form input:focus {
+  border: 2px solid #1fd100;
+}
+form button {
+  width: 94%;
+  margin: 2em 3% 0;
+  border: none;
+  background: #1fd100;
+  padding: 1em 0;
+  font-size: 1.25em;
+  clear: both;
+  color: #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  outline: none;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+form button:focus, form button:hover {
+  background: #262626;
+}
+
+.hide-show {
+  width: 94%;
+  margin: -3.62em 3% 0 1.5%;
+  position: relative;
+  z-index: 5;
+  display: none;
+}
+.hide-show span {
+  background: #1fd100;
+  font-size: 1em;
+  padding: .5em;
+  float: right;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+<div class="login_form">
+<setion class="login-wrapper">
+<div class="logo">
+<a target="_blank" rel="noopener" href="https://unrealnavigation.com/">
+<img src="./unreal-navigation-logo.png" alt=""></a>
+</div>
+<form id="login" method="post" action="https://cdpn.io/geoffreyrose/fullembedgrid/HKDkB?type=embed&amp;animations=run#">
+<label for="username">User Name</label>
+<input required="" name="login[username]" type="text" autocapitalize="off" autocorrect="off">
+<label for="password">Password</label>
+<input class="password" required="" name="login[password]" type="password">
+<div class="hide-show" style="display: block;">
+<span class="show">Show</span>
+</div>
+<button type="submit">Sign In</button>
+</form>
+
+</setion></div>
+<script src="./stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js.download"></script>
+<script src="./jquery.min.js.download"></script>
+<script id="rendered-js">
+$(function () {
+  $('.hide-show').show();
+  $('.hide-show span').addClass('show');
+
+  $('.hide-show span').click(function () {
+    if ($(this).hasClass('show')) {
+      $(this).text('Hide');
+      $('input[name="login[password]"]').attr('type', 'text');
+      $(this).removeClass('show');
+    } else {
+      $(this).text('Show');
+      $('input[name="login[password]"]').attr('type', 'password');
+      $(this).addClass('show');
+    }
+  });
+
+  $('form button[type="submit"]').on('click', function () {
+    $('.hide-show span').text('Show').addClass('show');
+    $('.hide-show').parent().find('input[name="login[password]"]').attr('type', 'password');
+  });
+});
+//# sourceURL=pen.js
+    </script>
+<script src="./iframeRefreshCSS-e03f509ba0a671350b4b363ff105b2eb009850f34a2b4deaadaa63ed5d970b37.js.download"></script>
+
+
+</body></html>

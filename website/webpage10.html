@@ -1,0 +1,65 @@
+</style><!DOCTYPE html>
+<html lang="en">
+ <head>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style_modified2.css') }}">
+<script>
+
+$(document).ready(function(){
+    $('#show1').click(function() {
+      $('.menu1').toggle("slide");
+    });
+});
+
+$(document).ready(function(){
+    $('#show2').click(function() {
+      $('.menu2').toggle("slide");
+    });
+});
+
+$(document).ready(function(){
+    $('#show3').click(function() {
+      $('.menu3').toggle("slide");
+    });
+});
+
+</script>
+
+<script>
+
+	function callme()
+	{
+		document.getElementById('dis').style.display="block";
+	}
+
+</script>
+ </head>
+ <body>
+       <div style="position:absolute;z-index:1;left:10px;top:2px"><image src="logo.jpg" width="100" height="90" /></div>
+	<div style="position:absolute;z-index:1;left:1425px;top:2px"><image src="logo2.png" width="100" height="90" /></div>
+    <h3 style="color:hsl(240,100%,50%);text-align:center;font-size:30pt;line-height:10px;">Ministry of Women and Child Development</h3>
+	<h3 style="color:red;text-align:center;font-size:27pt;line-height:15px;">Government of India</h3>
+ <ul>
+ <div id="show1" style="background-color:tomato;font-size:14pt;margin: 0; padding: 0;">
+  <li style="float:right"class="h1-bar"><a href="newhome.html">Logout</a></li>
+  <li style="float:right"class="h1-bar"><a href="anmdb.html">Home</a></li>
+ </ul><br>
+ <div id="show1" style="background-color:tomato;font-size:14pt;margin: 0; padding: 0;">
+<ul class="v1-bar">
+
+		<li><a class="v-bar">User Administration</a></li>
+		<div class="menu1" style="background-color:white;">
+			<a target="iframe_a" href="myprofile.html" onclick="callme();" style="color:black;font-size:14pt;background-color:white;"class="v-bar">My Profile</h4></a>
+			<a target="iframe_a" href="Changepassword.html" onclick="callme();"style="color:black;font-size:14pt;background-color:white;"class="v-bar">Change Password</h4></a>
+		</div>
+	</div>
+		<li><a target="iframe_a" href="/approverequest" class="v-bar">Approve Request</a></li>
+		<li><a target="iframe_a" href="reportgeneration.html" class="v-bar">Report generation</a></li>
+</ul>  
+    <iframe height="564.5px" width="81.5%" style="margin-left:280px; margin-top:5px;"  name="iframe_a"></iframe>
+ </body>
+</html>
+
+
+
+

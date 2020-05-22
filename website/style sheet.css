@@ -1,0 +1,43 @@
+*
+{
+    margin:0;
+    padding:0;
+    
+}
+header
+{
+    background-image:url(p1.jpg);
+    height:100vh;
+    background-size:cover;
+    background-position:center;
+}
+.nav-bar
+{
+    background:rgb(0,0,0,0.5);
+    height:80px;
+}
+.logo
+{
+    margin:10px 50px;
+    height:60px;
+}
+.menu
+{
+    float:right;
+    list-style:none;
+     margin:20px;
+}
+.menu li
+{
+    display: inline-block;
+    margin:10px 5px;
+}
+.menu li a
+{
+    text-decoration :none;
+    color:#fff;
+    pading:5px 10px;
+    font-family:sans-serif;
+    letter-spacing:2px;
+    border:1px solid #fff;
+}

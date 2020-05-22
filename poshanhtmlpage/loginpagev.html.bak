@@ -1,0 +1,143 @@
+ <!DOCTYPE html>
+      <html lang="en">
+
+       <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SOLVentas | Sales Systems</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/form-elements.css">
+    <link rel="stylesheet" href="public/css/style.css">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script 
+        src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script 
+         src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+
+    <style type="text/css">
+
+     div.container {
+margin: 0 !important;
+margin-right: 0 !important;
+ padding-right: 0 !important;
+padding-left: 0 !important;
+  }
+
+  #formulario, #imagen {
+/*border: 2px solid red !important;*/
+margin-right: 0 !important;
+  }
+
+   form input {
+   padding: 10px !important;
+   border: 1px solid rgba(0,0,0,0,2) !important;
+   height: 40px !important;
+
+    }
+
+    button {
+    background-color: blue !important;
+      }
+    /*#imagen {
+
+   background-image: url() !important;
+
+          background-position: center center !important;
+
+    background-repeat: no-repeat !important;
+
+     background-attachment: fixed !important;
+
+     background-size: cover !important;
+
+    background-color: #66999 !important;
+
+          } */
+        </style>
+    </head>
+
+    <body>
+
+
+
+           <!-- Top content -->
+
+       <div class="container" style="margin: 0; padding: 0;">
+        <div class="row" style="margin: 0; padding: 0;">
+        <div class="col-sm-12 col-md-4 col-lg-4" style="margin: 0; padding-left: 0; padding-right: 0; ">
+            <div class="form-top">
+                            <div class="form-top-left">
+                                <h3>Get Access to your Account</h3>
+                                <p>Insert your username and password to Log in:</p>
+                            </div>
+                            <div class="form-top-right">
+                                <i class="fa fa-lock"></i>
+                            </div>
+                        </div>
+                        <div class="form-bottom" style="background-color: #F3F3F3;">
+                            <form role="form" id="frmIngresar" name="frmIngresar" method="post" class="login-form">
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-username">User</label>
+                                    <input type="text" name="form-username" placeholder="User..." class="form-username form-control" id="form-username">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="form-password">Password</label>
+                                    <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
+                                </div>
+                                <button type="submit" class="btn">Log In</button>
+                            </form>
+                        </div>
+        </div>
+         <div class="col-sm-12 col-md-8 col-lg-8" style="background-image: url('img/backgrounds/1.jpg');  width: 66%; min-height: 100vh; background-repeat: no-repeat; background-size: cover; margin: 0; padding: 0; "></div>
+        </div>
+    </div>
+
+<!-- Javascript -->
+    <script type="text/javascript" src="public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="public/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="public/js/bootbox.min.js"></script>
+
+<script type="text/javascript">
+        jQuery(document).ready(function() {   
+            $("form#frmIngresar").submit(IngresarSistema);
+
+
+        function IngresarSistema(e) {
+            e.preventDefault();
+
+            var user = $("#form-username").val();
+            var pass = $("#form-password").val();
+
+            $.getJSON("ajax/UsuarioAjax.php?op=IngresarSistema", {user: user, pass: pass}, function(r) {
+                if (r) {
+                    $(location).attr("href", "acceder.php");
+                    //window.location.href = "acceder.php";
+                } else {
+                    bootbox.alert("Error! Username or password are not correct!");
+                    $("#form-username").val("");
+                    $("#form-password").val("");
+                    $("#form-username").focus();
+                }
+            });  
+     });
+    </script>
+
+</body>   }

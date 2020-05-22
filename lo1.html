@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<title>Login Form</title>
+<style>
+body
+{
+font-family:roboto;
+}
+.login
+{
+
+padding:50px;
+width:230px;
+margin:auto;
+margin-top:50px;
+height:380px;
+}
+form
+{
+width:240px;
+text-align:center;
+}
+input
+{
+width:240px;
+text-align:center;
+background:#ecf0f1;
+border:2px solid transparent;
+border-radius:3px;
+font-size:16px;
+font-weight:200;
+padding:10px 0;
+transition:border .5s;
+}
+input[type=submit]
+{
+border:2px solid transparent;
+background:#3498db;
+color:darkblue;
+font-size:16px;
+line-height:25px;
+padding:10px 0;
+border-radius:3px;
+}
+input[type=submit]:hover
+{
+background:#2980b9;
+}
+h2
+{
+    color:hotpink;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+        </form>
+<form>
+<h2>Login</h2><br>
+<input type="text" name="username" placeholder="Aadhar number">
+<br>
+<br>
+<input type=-"password" name="password" placeholder="Password">
+<br>
+<br>
+<input type="submit" value="Login">
+<br>
+<br>
+<a herf="#">Forgot Password ?</a>
+</form>
+         </div>
+    </div>
+    </body>
+    </html>

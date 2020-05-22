@@ -1,0 +1,52 @@
+<!DOCTYPE html">
+<html lang="en">
+ <head>
+<link rel="stylesheet" href="style_modified2.css" type="text/css" media="all" />
+ </head>
+ <style>
+ body{
+ margin: 0;
+  background-color:#7DA2A9;
+  }
+  .wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    bottom: 480px;
+	width:80px;
+	height:30px;
+	background-color:forestgreen;
+    color:white;
+}
+ </style>
+ <body>
+	<form action="/updatepwd" method="POST">
+	<table border="0" align="center" style="text-align:middle;">
+	<br><h3 style="color:deeppink;text-align:center;font-size:20pt;">CHANGE PASSWORD</h3><br>
+	<tr>
+	<th style="font-size:12pt;"><pre>Old Password </pre></th>
+    <td><input type="password" id="Old Password" name="Oldpwd"></td>
+    </tr>
+	<tr>
+	<th style="font-size:12pt;"><pre>New Password </pre></th>
+	<td><input type="password" id="New Password" name="Newpwd"></td>
+    </tr>
+	<tr>
+	<th style="font-size:12pt;"><pre>Confirm Password</pre></th>
+	<td><input type="password" id="Rnew Password" name="Rnewpwd"></td>
+    </tr>
+	</table>
+	 <div class="wrapper">
+    <button class="button"><strong>Submit</strong></button><br><br>
+</div>
+	<h3 align="center"style="color:pink;">{{msg}}</h3>
+	</form>
+
+  
+ </body>
+</html>
+
+
+

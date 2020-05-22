@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)file:///C:/Users/Lakshmi%20Devi/Downloads/Childhd%20(2).html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <style>
+* {
+  box-sizing: border-box;
+}
+body {
+background-color:#7DA2A9;
+  margin: 0;
+}
+td,th
+{
+padding:3px;
+width:1.2px;
+}
+input,select{
+width:210px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width:33.33%;
+  padding: 12px;
+}
+.column1 {
+  float: left;
+  width:100%;
+  padding:2px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.submit {
+    width: 18x;
+    height: 20px;
+    display: block;
+    margin: 2.5em auto 0;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+	text-align:center;
+}
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    bottom: 390px;
+	width:80px;
+	height:30px;
+	background-color:forestgreen;
+    color:white;
+}
+.button1 {
+    position: absolute;
+    top: 120px;
+	width:80px;
+	height:30px;
+	background-color:forestgreen;
+    color:white;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+ </head>
+<body>
+<form action="file:///C:/childhealthdetails" method="POST">
+	<h3 style="color:deeppink;text-align:center;font-size:20pt;">CHILD HEALTH DETAILS</h3><table border="0" align="center" style="text-align:left;" width="400">
+	
+	<tbody><tr>
+	<th>MRno</th>
+	<td><input type="text" name="MRno"></td>
+	</tr>
+	</tbody></table><br>
+	<div class="wrapper">
+    <button class="button1"><strong>OK</strong></button><br>
+</div>
+	<div class="row">
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+	<tbody><tr>
+	<th>Visit No</th>
+    <td><input type="number" name="Visit No"><br\></td>
+	</tr>
+	<tr>
+	<th>Age</th>
+    <td><input type="number" name="Age"></td>
+	</tr>
+	<tr>
+	<th>Next Visit Date</th>
+	<td><input type="Date" name="Next Visit Date"></td>
+	</tr>
+	<tr>
+	<th>Remarks</th>
+	<td><input type="text" name="Remarks"></td>
+	</tr>
+	</tbody></table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+	<tbody><tr>
+	<th>Weight</th>
+    <td><input type="number" name="Weight"></td>
+	</tr>
+	<tr>
+	<th>Head Circumference</th>
+    <td><input type="text" name="Head Circumference"></td>
+	</tr>
+	<tr>
+	<th>Vaccine Given</th>
+	<td><select name="Vaccine Given">
+	<option value="" selected="selected">select vaccine 
+		</option><option value="one">BCG
+		</option><option value="two">DPT booster 1
+		</option><option value="three">DPT booster 2
+		</option><option value="four">Hep-B
+		</option><option value="five">IPV 1
+		</option><option value="six">IPV 2
+		</option><option value="seven">JE 1
+		</option><option value="eight">JE 2
+		</option><option value="nine">MR/Measles 1
+		</option><option value="ten">MR/Measles 2
+		</option><option value="eleven">OPV 0
+		</option><option value="twelve">OPV 1
+		</option><option value="thirteen">OPV 2
+		</option><option value="fourteen">OPV booster
+		</option><option value="fifteen">PCV 1
+		</option><option value="sixteen">PCV 2
+		</option><option value="seventeen">Penta 1
+		</option><option value="eighteen">Penta 2
+		</option><option value="ninteen">Penta 3
+		</option><option value="twenty">Rotavirus 1
+		</option><option value="twenty one">Rotavirus 2
+		</option><option value="twenty two">Rotavirus 3
+		</option><option value="twenty three">TT
+		</option><option value="twenty four">Vitamin A
+	</option></select></td>
+	</tr>
+	</tbody></table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+	<tbody><tr>
+	<th>Height</th>
+    <td><input type="number" name="Height"></td>
+	</tr>
+	<tr>
+	<th>Visited Date</th>
+	<td><input type="date" name="Visited Date"></td>
+	</tr>
+	<tr>
+	<th>Next Vaccine to be Given</th>
+	<td><select name="Next Vaccine">
+		<option value="" selected="selected">select vaccine 
+		</option><option value="one">BCG
+		</option><option value="two">DPT booster 1
+		</option><option value="three">DPT booster 2
+		</option><option value="four">Hep-B
+		</option><option value="five">IPV 1
+		</option><option value="six">IPV 2
+		</option><option value="seven">JE 1
+		</option><option value="eight">JE 2
+		</option><option value="nine">MR/Measles 1
+		</option><option value="ten">MR/Measles 2
+		</option><option value="eleven">OPV 0
+		</option><option value="twelve">OPV 1
+		</option><option value="thirteen">OPV 2
+		</option><option value="fourteen">OPV booster
+		</option><option value="fifteen">PCV 1
+		</option><option value="sixteen">PCV 2
+		</option><option value="seventeen">Penta 1
+		</option><option value="eighteen">Penta 2
+		</option><option value="ninteen">Penta 3
+		</option><option value="twenty">Rotavirus 1
+		</option><option value="twenty one">Rotavirus 2
+		</option><option value="twenty two">Rotavirus 3
+		</option><option value="twenty three">TT
+		</option><option value="twenty four">Vitamin A
+	</option></select></td>
+	</tr>
+	</tbody></table>
+	</div>
+	</div>
+	<div class="wrapper">
+    <button class="button"><strong>Update</strong></button><br>
+</div>
+	<h3 align="center" style="color:hsl(120, 100%, 70%);">{{msg}}</h3>
+</form>
+
+
+</body></html>

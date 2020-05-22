@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="{{ url_for('static',filename='stylesheet/style_modified2.css') }}" type="text/css" media="all" />
+ </head>
+ <style>
+ body{
+ margin: 0;
+  background-color:#7DA2A9;
+  }
+ .wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    bottom: 260px;
+	width:80px;
+	height:30px;
+	background-color:forestgreen;
+    color:white;
+}
+button1 {
+    position: absolute;
+    top: 120px;
+	width:80px;
+	height:30px;
+	background-color:forestgreen`;
+    color:white;
+td,th
+{
+padding:3px;
+width:1px;
+}
+input,select{
+width:200px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: center;
+  width:33.33%;
+  padding: 12px;
+}
+.column1 {
+  float:center;
+  width:100%;
+  padding:0px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+ </style>
+<body>
+<form action="womenhealthdetails" method='POST'>
+	<table border="0" align="center"  style="text-align:center;"width="400">
+	<h3 style="color:deeppink;text-align:center;font-size:20pt;">WOMEN HEALTH DETAILS</h3>
+	<tr>
+	<th>MRno</th>
+	<td><input type="text" name="MRno"></td><br>
+	</tr>
+	</table>
+	<div class="wrapper">
+    <button class="button1"><strong>OK</strong></button><br><br>
+</div>
+	<div class="row">
+	<div class="column">
+	<table border="0" align="center" style="text-align:center;" width="450">
+	<tr>
+	<th>Visit No</th>
+    <td><input type="number" name="Visit No"></td>
+	</tr>
+	<tr>
+	<th>HDRL</th>
+    <td><input type="text" name="HDRL"></td>
+	</tr>
+	<tr>
+	<th>Next Visit
+	Date</th>
+	<td><input type="Date" name="Next Visit Date"></td>
+	</tr>
+	<tr>
+	<th>Remarks</th>
+	<td><input type="text" name="Remarks"></td>
+	</tr>
+	</table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:center;" width="470">
+	<tr>
+	<th>Weight</th>
+    <td><input type="number" name="Weight"></td>
+	</tr>
+	<tr>
+	<th>Sugar Levels</th>
+    <td><input type="text" name="Sugar Levels"></td>
+	</tr>
+	<tr>
+	<th>Vaccine Given</th>
+	<td><select name="Vaccine Given">
+		<option value="" selected>
+		<option value="one">TT1
+		<option value="two">TT2
+		<option value="three">Daily supplementation
+		(Folic acid,iron)
+	</select></td>
+	</tr>
+	</table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:center;" width="470">
+	<tr>
+	<th>HIV/HBS</th>
+    <td><input type="text" name="HIV/HBS"></td>
+	</tr>
+	<tr>
+	<th>Visited Date</th>
+	<td><input type="date" name="Visited Date"></td>
+	</tr>
+	<tr>
+	<th>Next Vaccine 
+	to be Given</th>
+	<td><select name="Next Vaccine">
+		<option value="" selected>
+		<option value="one">TT1
+		<option value="two">TT2
+		<option value="three">Daily supplementation(Folic acid,iron)
+	</select></td>
+	</tr>
+	</table>
+	</div>
+	</div>
+	<div class="wrapper">
+    <button class="button"><strong>Update</strong></button><br><br>
+</div>
+			<h3 align="center"style="color:hsl(120, 100%, 70%);">{{msg}}</h3>
+</form>
+
+</body>
+</html>

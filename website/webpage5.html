@@ -1,0 +1,174 @@
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color:#7DA2A9; 
+}
+td,th
+{
+padding:2.2px;
+width:1px;
+}
+input,select{
+width:200px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width:33.33%;
+  padding: 10px;
+}
+.column1 {
+  float: left;
+  width:100%;
+  padding:0px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.submit {
+    width: 55px;
+    height: 30px;
+    display: block;
+    margin: 2.5em auto 0;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    -webkit-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<form action="/profile">
+		<table border="0" align="center" style="text-align:left;padding-top:0px;" width="400">
+	<h3 style="color:deeppink;text-align:center;font-size:20pt;">My Profile</h3>
+	<tr>
+	<th style="font-size:14pt;">ID</th>
+    <td>{{userid}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">Name</th>
+	<td>{{name}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">Designation</th>
+	<td>{{designation}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">Email ID</th>
+	<td>{{emailid}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;">Mobile no</th>
+	<td>{{mobileno}}</td>
+	</tr>
+	</table>
+<p style="font-size:18pt;line-height:0px;color:hsl(240,100%,50%)"><b>Place of Work</b></p>
+<div class="row">
+    <div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">State</th>
+	<td style="padding-left:70px;">{{state}}</td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">PHC</th>
+    <td style="padding-left:70px;">{{phc}}</td>
+	</tr>
+	</table>
+	</div>
+    <div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">District</th>
+    <td>{{district}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Subcenter</th>
+    <td>{{subcenter}}</td>
+	</tr>
+	</table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Taluka</th>
+    <td>{{taluka}}</td>
+	</tr>
+	</table>
+	</div>
+</div>
+	<p style="font-size:18pt;line-height:0px;color:hsl(240,100%,50%);"><b>Permanent Address</b></p>
+   <div class="row">
+	 <div class="column">
+	 	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">Dno</th>
+	<td style="padding-left:-5px;">{{dno}}</td>
+	</tr>
+		<tr>
+	<th style="font-size:14pt;padding-left:10px;">Taluka</th>
+    <td style="padding-left:-5px;">{{tlka}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:10px;">Pincode</th>
+    <td style="padding-left:-5px;">{{pcode}}</td>
+	</tr>
+	</table>
+
+    </div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Street</th>
+    <td>{{street}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">District</th>
+    <td>{{dis}}</td>
+	</tr>
+	</table>
+	</div>
+	<div class="column">
+	<table border="0" align="center" style="text-align:left;" width="400">
+		<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">Village</th>
+    <td>{{village}}</td>
+	</tr>
+	<tr>
+	<th style="font-size:14pt;width:100px;padding-left:5px;">State</th>
+    <td>{{st}}</td>
+	</tr>
+	</table>
+	</div>
+ </div>
+</form>
+
+</body>
+</html>
